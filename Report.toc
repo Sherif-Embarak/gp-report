@@ -1,0 +1,18 @@
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {2}Literature review}{4}
+\contentsline {subsection}{\numberline {2.1}Data Visualization}{4}
+\contentsline {subsubsection}{\numberline {2.1.1}Definition}{4}
+\contentsline {subsubsection}{\numberline {2.1.2}Data visualization importance}{4}
+\contentsline {section}{\numberline {3}Grammar of graphics}{5}
+\contentsline {subsection}{\numberline {3.1}What is the meaning of Grammar?}{5}
+\contentsline {subsection}{\numberline {3.2}What is the Grammar of Graphics?}{5}
+\contentsline {subsection}{\numberline {3.3}Grammar of graphics features}{5}
+\contentsline {section}{\numberline {4}Comparative study among GoG libraries }{6}
+\contentsline {section}{\numberline {5}Our Approach}{6}
+\contentsline {section}{\numberline {6}Team members playrolls}{6}
+\contentsline {subsection}{\numberline {6.1}Raafat Sobhy}{6}
+\contentsline {subsection}{\numberline {6.2}Sherif Embarak}{7}
+\contentsline {subsection}{\numberline {6.3}Ahmed Fouad}{7}
+\contentsline {subsection}{\numberline {6.4}Yusuf Mohamed}{7}
+\contentsline {section}{\numberline {7}Gantt Chart}{7}
+\contentsline {section}{\numberline {8}Deliverable}{8}
