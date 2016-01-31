@@ -14,5 +14,5 @@
 \contentsline {subsection}{\numberline {6.2}Sherif Embarak}{7}
 \contentsline {subsection}{\numberline {6.3}Ahmed Fouad}{7}
 \contentsline {subsection}{\numberline {6.4}Yusuf Mohamed}{7}
-\contentsline {section}{\numberline {7}Gantt Chart}{7}
+\contentsline {section}{\numberline {7}Gantt Chart}{8}
 \contentsline {section}{\numberline {8}Deliverable}{8}

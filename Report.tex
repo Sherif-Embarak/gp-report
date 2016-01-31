@@ -5,6 +5,7 @@
 \usepackage{colortbl}
 \usepackage{adjustbox}
 \usepackage{xcolor}
+\usepackage{amsmath}
 \title{Report}
 \author{GP Team 2015}
 \date{\today}
@@ -132,16 +133,45 @@ Design \& Implement a library that is based on Grammar of graphics to be the bas
 \end{itemize}
 \subsection{Yusuf Mohamed}
 \begin{itemize}
-\item Package Manager
+\item {\Large Package Manager} for application layer.
 \begin{itemize}
-\item fetch \& remove plugins from npm and place it in specific folder which will be determined after adding path variable for our application.
+\item A cli utility tool which fetches \& removes plugins (extensible piece of code) from npm and places it in specific folder. once the application bootstraps it will check all the existing plugins in the folder to add them which will provide feature rich application.
+\item why use a new directory for plugins?
+\begin{itemize}
+\item The idea behind using a new directory other than \texttt{node\_modules} is that the application will lookup plugins in it, and application shouldn't lookup plugins in the \texttt{node\_modules} folders, as it will be another problem to differentiate between plugins and other node modules.
+So, the separation is needed to help the visualization application lookup plugins in a folders containing plugins only.
 \end{itemize}
-\item Application
+\item Works on all major platforms like Windows, Linux and Mac.
+\item Took in consideration various plugin manager design like apm (\texttt{atom package manager}) and Brackets plugins.
+\item why didn't we use apm or brackets plugin manager?
 \begin{itemize}
-\item Using Electron, photon kit and internal process communication 'ipc'
+\item APM : no documentation or how-to, limits the plugins to be hosted on github only.
+\item Brackets : limits the developer with a specific structure and specific keywords to make his plugin up and running.
+\end{itemize}
+\item Usage
+\begin{itemize}
+\item Add Or Update a plugin.
+\begin{equation*}
+vispack \hspace{3} install \hspace{3} plugin\_name \nonumber
+\end{equation*}
+\item Remove a plugin
+\begin{equation*}
+vispack \hspace{3} remove \hspace{3} plugin\_name \nonumber
+\end{equation*}
+\end{itemize}
 
 \end{itemize}
+\item {\Large Application Layer}
+\begin{itemize}
+\item Made with electron formerly known as NW.js which is a cross platform application to distribute the application on all major platforms and photon kit for styling.
+\item Interprocess communication \texttt{ipc} to coordinate activities among different program process (main process and rendering process) via sending and  receiving messages between the mentioned processes.
 \end{itemize}
+\end{itemize}
+\begin{figure}[h!]
+\caption{Prototype Design}
+\includegraphics[width=\textwidth]{prototype}
+
+\end{figure}
 
 \section{Gantt Chart}
 \begin{figure}[h!]
