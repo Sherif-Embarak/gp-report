@@ -4,12 +4,14 @@
 \usepackage{booktabs}
 \usepackage{colortbl}
 \usepackage{adjustbox}
+\usepackage{listings}  
 \usepackage{xcolor}
 \usepackage{amsmath}
 \title{Report}
 \author{GP Team 2015}
 \date{\today}
 \begin{document}
+
 \maketitle
 \newpage
 \tableofcontents
@@ -121,11 +123,149 @@ Design \& Implement a library that is based on Grammar of graphics to be the bas
 \end{itemize}
 \end{itemize}
 \subsection{Sherif Embarak}
+
+\lstset{language=Java}
 \begin{itemize}
 \item adding full documentation to all function
-\item partial implementation for link, bin, region and summary functions
-\item importing csv files to js objects
+\begin{itemize}
+\item Example : 
+
+\\ \# Project     \| GoGLib
+\\
+\# Module  \hspace{2}    \| Stat\hspace{2} Methods
+\\
+\# Author  \hspace{2}    \| Sherif \hspace{2}Emabrak
+\\
+\# Description \hspace{2} \| Given\hspace{2} a\hspace{2} list\hspace{2} of \hspace{2}n\hspace{2} nodes \hspace{2}(n\hspace{2} assumed \hspace{2}even)\hspace{2} represented \hspace{2}by\hspace{2} the \\
+\#    \hspace{70}indices\hspace{2}  (1,2,3,...) \hspace{2}, \hspace{2}the \hspace{2}join \hspace{2}method\hspace{2} returns\hspace{2} a \hspace{2}list \hspace{2}of \hspace{2}edges
+\\
+\# \hspace{70}               represented\hspace{2}  by \hspace{2}the\hspace{2} indices \hspace{2}{(1,1+n/2),(2,2+n/2),...}This \hspace{2} method
+\\
+\#  \hspace{70}is\hspace{2} useful\hspace{2} for\hspace{2} blending\hspace{2} two\hspace{2} varsets\hspace{2} of \hspace{2}nodes \hspace{2}because\hspace{2} it \hspace{2}pairs \hspace{2}the
+\\
+\# \hspace{70}first\hspace{2} node \hspace{2}in\hspace{2} the\hspace{2} first \hspace{2} column \hspace{2}with \hspace{2}the \hspace{2}first \hspace{2}node 
+\\
+\#   \hspace{70}in\hspace{2} the\hspace{2} second,\hspace{2} and\hspace{2} so\hspace{2} on.
+\\
+\# -------------------------
+\\
 \end{itemize}
+\item partial implementation for link, bin, region and summary functions
+\begin{itemize}
+\item link functions :
+
+\begin{itemize}
+\item join.
+\begin{lstlisting}[frame=single] 
+join = (input_array...) ->
+  n = input_array.length
+  result = []
+  for  key,value  of input_array
+    result.push([value,value+n/2])
+  result
+\end{lstlisting}
+\item sequence. 
+\begin{lstlisting}[frame=single] 
+sequence = (input_array...) ->
+  result = []
+  for  key,value of input_array
+    temp=key
+    key=value
+    value=input_array[parseInt(temp)+1]
+    result.push([key,value])
+  result
+\end{lstlisting} 
+\end{itemize}
+\item bin functions :
+\item summary functions :
+\begin{itemize}
+\item sum.
+\begin{lstlisting}[frame=single]
+sum = (input_array...) ->
+  total=0;
+  for count in input_array
+    total+=count
+  total
+\end{lstlisting} 
+\item mean.
+\begin{lstlisting}[frame=single]
+sum = (input_array...) ->
+  total=0;
+  for count in input_array
+    total+=count
+  total
+
+
+mean = (input_array...) ->
+  (sum input_array...)/input_array.length
+  
+\end{lstlisting} 
+\item mode.
+\begin{lstlisting}[frame=single]
+mode = (input_array...) ->
+  counter = 1
+  max = 0;
+  result = input_array[0]
+
+  input_array.sort()
+
+  for i in [1...input_array.length-1]
+    if(input_array[i]==input_array[i+1])
+      counter++
+      if(counter > max)
+        max=counter
+        result = input_array[i]
+      else
+        counter = 1
+
+  result
+\end{lstlisting}
+\\
+\item median. \\
+\begin{lstlisting}[frame=single]
+median = (input_array...) ->
+  size = input_array.length
+  posetion = 0
+  result = 0
+  if size%2 isnt 0
+    posetion = (size-1)/2
+    result = input_array[posetion]
+  else
+    posetion = size / 2
+    result = (input_array[posetion]+
+    input_array[posetion-1])/2
+  result
+\end{lstlisting} 
+\item log. 
+\begin{lstlisting}[frame=single]
+log = (input)  ->
+  Math.log(input)
+\end{lstlisting}  
+\end{itemize}
+\item region functions :
+\item smooth functions :
+\begin{itemize}
+\item sum.
+\item mean.
+\item mode.
+\item median.
+\item log.  
+\end{itemize}
+\end{itemize}
+\begin{itemize}
+
+\item importing csv files to js objects
+\begin{itemize}
+\item Import CSV files and treat each row as JSON object
+\end{itemize}  
+\begin{itemize}
+\item Show data in the browser as table 
+\end{itemize} 
+\begin{itemize}
+\item Add Type, Tag, or etc for table or column. 
+\end{itemize} 
+
+\end{itemize}  
 \subsection{Ahmed Fouad}
 \begin{itemize}
 \item List predefined figures in GoG book

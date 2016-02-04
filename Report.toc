@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {6}Team members playrolls}{6}
 \contentsline {subsection}{\numberline {6.1}Raafat Sobhy}{6}
 \contentsline {subsection}{\numberline {6.2}Sherif Embarak}{7}
-\contentsline {subsection}{\numberline {6.3}Ahmed Fouad}{7}
-\contentsline {subsection}{\numberline {6.4}Yusuf Mohamed}{7}
-\contentsline {section}{\numberline {7}Gantt Chart}{8}
-\contentsline {section}{\numberline {8}Deliverable}{8}
+\contentsline {subsection}{\numberline {6.3}Ahmed Fouad}{9}
+\contentsline {subsection}{\numberline {6.4}Yusuf Mohamed}{9}
+\contentsline {section}{\numberline {7}Gantt Chart}{10}
+\contentsline {section}{\numberline {8}Deliverable}{10}
