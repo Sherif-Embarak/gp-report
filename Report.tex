@@ -92,12 +92,69 @@ the variable mapping function return a single value in the range for every index
 \end{figure}
 \newpage
 \subsubsection{Algebra}
+Algebra deals with restoring and balancing sets of variables in order
+to create the specification for the frames in which graphs are embedded. \\
+\begin{itemize}
+\item Algebra Syntax
+\begin{itemize}
+\item Symbols \\
+A symbol is used to represent an entity operated on by an algebra. The symbols in varset algebra are varsets (e.g., Special variable (1), which represents the unity variable. Its range is one unity value). \\
+\item Operators \\
+An operator is a method for relating symbols in an algebra. There are three operators in the graphical system, called cross, nest, and blend.
+\begin{itemize}
+\item Cross (*) \\
+Cross joins the left varset with the right to produce a set of tuples.  
+$$ A * B :	(s,t) \longrightarrow A(s)\cap B(t) $$
+$$ V_{A * B} = \lbrace(s,t) , \forall s \in \forall_{A} , \forall t \in V_{B} \rbrace $$  
+\item Nest ( / ) \\
+Nest produces a varset that looks like the result of a cross but the domain of a nest is not a subset of the domain of a cross, however. \\
+Even though they look the same, the tuples of a nest are colored or tagged and
+the tuples of a cross are not.
+ 
+$$ A / B :	(s,t) \longrightarrow A(s)\cap B(t) $$
+$$ V_{A / B} = \lbrace(s,t) , \forall s \in \forall_{A} , \forall t \in V_{B} : A(s) \cap B(t) \neq \phi \rbrace $$
+
+
+\item Blend ( + ) \\
+Blend produces a union of varsets, Notice that we lose information about which value came from which column.
+
+$$ A + B :	(s,t) \longrightarrow A(s)\cup B(t) $$
+$$ 	V_{A + B} =  V_{A} \cup V_{B} $$
+
+
+\item Shorthand \\
+For convenience, we occasionally make use of two operator aliases that reduce
+the complexity of graphics algebra expressions. The first is "exponentiation"
+$$ X^{2} = X * X $$
+$$ X^{3} = X * X * X $$
+The second is a "dot-cross" operation (assuming the arguments conform)
+$$ ( X + Y ) \bullet ( A + B) = X*A + Y*B $$
+\\ 
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+Since our extract-variables process made two separate variables, we need
+to combine them into one variable so that the rows are associated with each
+other. We use the algebraic cross function to accomplish this. (e.g. cross(Response, Gender))
 \begin{figure}[h!]
 \caption{Algebra Layer}
 \includegraphics[width=\textwidth]{pic/pre2}
 \end{figure}
 \newpage
 \subsubsection{Scales}
+The categorical variables Response and Gender must have a defined order.
+A categorical scale transformation associates the values of a categorical
+variable with the set of integers. It may do this through a variety of possible
+methods. Any number of automatic categorical scale transformations can be
+devised, such as natural (alphabetical) order, relative frequency of the answer,
+or even the length of the string. \\
+ We will use a custom ordering that maps $ Rarely \rightarrow 1, Infrequently \rightarrow 2,
+Occasionally \rightarrow 3, Frequently \rightarrow 4, Not Sure \rightarrow 5. \\ $
+ This is derived from the ordering
+of the frequency implied by the responses, where the Not Sure case isn't
+comparable and is arbitrarily placed last. We will use an alphabetical ordering
+for the Gender variable. The result appears in Figure 5.
 \begin{figure}[h!]
 \caption{Scales Layer}
 \includegraphics[width=\textwidth]{pic/pre3}
