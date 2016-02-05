@@ -161,6 +161,15 @@ for the Gender variable. The result appears in Figure 5.
 \end{figure}
 \newpage
 \subsubsection{Statistics}
+Our system will ultimately make one graphical element per row of a varset. A
+pie chart of the data we have so far would therefore have 3,835 slices in it. This
+data layout isn't what we usually have in mind when we make a pie. In order
+to reduce the number of cases, we will need to do some statistics on the data. \\ \\
+A pie chart uses the pie wedges to represent the proportion of the whole
+for some category. The summary.proportion function is an aggregating statistic.
+It aggregates over columns constituting a whole pie’s domain— in this
+case, each gender is a whole. The aggregated variable is Response. Figure 6
+shows the result.
 \begin{figure}[h!]
 \caption{Statistics Layer}
 \includegraphics[width=\textwidth]{pic/pre4}
