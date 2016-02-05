@@ -77,6 +77,61 @@ The grammar of graphics takes us beyond a limited set of charts (words) to an al
 \includegraphics[width=\textwidth]{pre9}
 \end{figure}
 \newpage
+\subsection{Brief explanation about GoG layers}
+\subsubsection{Variables}
+A variable gives us a method for associating a concept like income with a set of data. Variables
+are used together with operators in the syntactical portion of our specification language (e.g., Response \& Gender). \\ \\
+A variable refers to a column in a rectangular
+cases-by-variables file. Many statistical packages assume rows are cases or observations that presents instances or samples of a variable represented
+by the column. \\ \\
+ There is nothing in our definition of a variable which requires it to represent a row or column, however. The only requirement is that
+the variable mapping function return a single value in the range for every index.
+\begin{figure}[h!]
+\caption{Variables Layer}
+\includegraphics[width=\textwidth]{pic/pre1}
+\end{figure}
+\newpage
+\subsubsection{Algebra}
+\begin{figure}[h!]
+\caption{Algebra Layer}
+\includegraphics[width=\textwidth]{pic/pre2}
+\end{figure}
+\newpage
+\subsubsection{Scales}
+\begin{figure}[h!]
+\caption{Scales Layer}
+\includegraphics[width=\textwidth]{pic/pre3}
+\end{figure}
+\newpage
+\subsubsection{Statistics}
+\begin{figure}[h!]
+\caption{Statistics Layer}
+\includegraphics[width=\textwidth]{pic/pre4}
+\end{figure}
+\newpage
+\subsubsection{Geometry}
+\begin{figure}[h!]
+\caption{Geometry Layer}
+\includegraphics[width=\textwidth]{pic/pre5}
+\end{figure}
+\newpage
+\subsubsection{Coordinates}
+\begin{figure}[h!]
+\caption{Coordinates Layer}
+\includegraphics[width=\textwidth]{pic/pre6}
+\end{figure}
+\newpage
+\subsubsection{Aesthetics}
+\begin{figure}[h!]
+\caption{Aesthetics Layer}
+\includegraphics[width=\textwidth]{pic/pre7}
+\end{figure}
+\begin{figure}[h!]
+\caption{Output}
+\includegraphics[width=\textwidth]{pic/pre8}
+\end{figure}
+
+\newpage
 \section{Comparative study among GoG libraries }
 \begin{table}[!th]
 \caption{Comparative Study}
@@ -327,7 +382,6 @@ Partial implementation of GoG library which will make us able to generate the fo
 \item Bar Chart
 \item Histogram
 \item Parallel Coordinates
-\item Scatter Plot Matrix 
 \end{itemize}
 
 

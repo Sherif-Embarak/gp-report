@@ -7,12 +7,20 @@
 \contentsline {subsection}{\numberline {3.1}What is the meaning of Grammar?}{5}
 \contentsline {subsection}{\numberline {3.2}What is the Grammar of Graphics?}{5}
 \contentsline {subsection}{\numberline {3.3}Grammar of graphics features}{5}
-\contentsline {section}{\numberline {4}Comparative study among GoG libraries }{6}
-\contentsline {section}{\numberline {5}Our Approach}{6}
-\contentsline {section}{\numberline {6}Team members playrolls}{6}
-\contentsline {subsection}{\numberline {6.1}Raafat Sobhy}{6}
-\contentsline {subsection}{\numberline {6.2}Sherif Embarak}{7}
-\contentsline {subsection}{\numberline {6.3}Ahmed Fouad}{9}
-\contentsline {subsection}{\numberline {6.4}Yusuf Mohamed}{9}
-\contentsline {section}{\numberline {7}Gantt Chart}{10}
-\contentsline {section}{\numberline {8}Deliverable}{11}
+\contentsline {subsection}{\numberline {3.4}Brief explanation about GoG layers}{6}
+\contentsline {subsubsection}{\numberline {3.4.1}Variables}{6}
+\contentsline {subsubsection}{\numberline {3.4.2}Algebra}{7}
+\contentsline {subsubsection}{\numberline {3.4.3}Scales}{8}
+\contentsline {subsubsection}{\numberline {3.4.4}Statistics}{9}
+\contentsline {subsubsection}{\numberline {3.4.5}Geometry}{10}
+\contentsline {subsubsection}{\numberline {3.4.6}Coordinates}{11}
+\contentsline {subsubsection}{\numberline {3.4.7}Aesthetics}{12}
+\contentsline {section}{\numberline {4}Comparative study among GoG libraries }{13}
+\contentsline {section}{\numberline {5}Our Approach}{13}
+\contentsline {section}{\numberline {6}Team members playrolls}{14}
+\contentsline {subsection}{\numberline {6.1}Raafat Sobhy}{14}
+\contentsline {subsection}{\numberline {6.2}Sherif Embarak}{14}
+\contentsline {subsection}{\numberline {6.3}Ahmed Fouad}{17}
+\contentsline {subsection}{\numberline {6.4}Yusuf Mohamed}{17}
+\contentsline {section}{\numberline {7}Gantt Chart}{18}
+\contentsline {section}{\numberline {8}Deliverable}{19}
