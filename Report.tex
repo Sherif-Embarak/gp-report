@@ -176,22 +176,66 @@ shows the result, using the summary.proportion() statistical method.
 \end{figure}
 \newpage
 \subsubsection{Geometry}
+The grammar of graphics has a variety of different geometric graphing operations.\\
+In this case, we will use the interval graph.\\
+The interval() function converts an interval into a (usually rectangular) geometric
+object with a length proportional to the interval and a nonzero (usually
+constant) width.\\ \\
+The interval.stack() function cumulates the intervals constructed by the
+interval geometric object. In other words, stack is a modifier method on the interval
+class.\\
+Each interval is modified by incrementing its lower and upper
+bounds by the upper bound of the preceding interval in a sequence.
+Figure 7 shows the result.
 \begin{figure}[h!]
-\caption{Geometry Layer}
+\caption{Geometry Layer(interval.stack())}
 \includegraphics[width=\textwidth]{pic/pre5}
 \end{figure}
 \newpage
 \subsubsection{Coordinates}
+To make pie wedges, we apply a polar transformation to the shapes that were
+produced from the geometry. We send (x, y) to (r, theta) for the shapes.\\ Our
+program might accomplish this by digitizing the edges and sending each of the
+points through a simple transformation.\\ \\
+Figure 8 shows the result of the polar coordinate transformation.\\
+ We note
+that this transformation applies only to the position aesthetic. It is possible in
+the grammar of graphics to apply coordinate transformations to other aesthetics
+as well, e.g., COORD: polar.theta(aesthetic(color)).
 \begin{figure}[h!]
 \caption{Coordinates Layer}
 \includegraphics[width=\textwidth]{pic/pre6}
 \end{figure}
 \newpage
 \subsubsection{Aesthetics}
+We have created a graph, but a graph is a mathematical abstraction. We cannot
+sense mathematical abstractions. We must therefore give this abstraction perceivable
+form. Aesthetic functions translate a graph into a graphic.\\
+Figure 9
+adds three aesthetic functions —position, color, and label. \\ \\
+The output of each aesthetic function is a graphic, which is a set of drawing
+instructions for a renderer. The position() aesthetic translates the tuples
+corresponding to the vertices of the objects to be drawn into a renderer coordinate
+system (usually pixel-based). The color() aesthetic function produces
+an index to a color table so that the renderer can apply the appropriate color.
+We have colored the wedges in the table to signify this. The label() aesthetic
+function associates strings with values.
 \begin{figure}[h!]
-\caption{Aesthetics Layer}
+\caption{Aesthetics Layer (position(Response,Gender), color(Response), label(Response))}
 \includegraphics[width=\textwidth]{pic/pre7}
 \end{figure}
+\newpage
+Figure 10 shows a possible result of a renderer working on the data in Figure
+9, together with the formal specification for the graph.
+\\  \\
+DATA: response = Response\\
+DATA: gender = Gender\\
+SCALE: cat(dim(1),\\
+values("Rarely","Infrequently","Occasionally","Frequently","Not Sure"))\\
+SCALE: cat(dim(2), values("Female","Male"))\\
+COORD: rect(dim(2), polar.theta(dim(1)))\\
+ELEMENT:\\ interval.stack(position(summary.proportion(response*gender)),\\
+label(response), color(response))
 \begin{figure}[h!]
 \caption{Output}
 \includegraphics[width=\textwidth]{pic/pre8}
